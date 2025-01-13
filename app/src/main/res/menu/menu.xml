@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"/>
+
+    <item
+        android:id="@+id/deleteTask"
+        android:icon="@drawable/delete"
+        android:title="Delete"
+
+        />
+
+    <item
+        android:id="@+id/sort"
+        android:title="Sort"
+        >
+        <menu>
+            <item
+                android:id="@+id/sortByTitle"
+                android:title="Sort by Title" />
+            <item
+                android:id="@+id/sortByDate"
+                android:title="Sort by Date-Time" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/viewArchiveTask"
+        android:title="View Archived"
+        android:icon="@drawable/icon_archive"
+        app:showAsAction="ifRoom|collapseActionView"
+        />
+
+</menu>

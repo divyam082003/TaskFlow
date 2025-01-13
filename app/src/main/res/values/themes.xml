@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TaskFlow" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorAccent">@color/black</item>
+        <item name="colorPrimaryDark">@color/blue</item>
+
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <!-- Define a custom ActionMode style -->
+    <style name="CustomActionMode" parent="Widget.AppCompat.ActionMode">
+        <!-- Keep the ActionMode background same as ActionBar -->
+        <item name="background">@color/blue</item>
+        <!-- Optional: Set title text color to match normal ActionBar -->
+        <item name="titleTextStyle">@style/CustomActionModeTitleText</item>
+    </style>
+
+    <!-- Define the title text style for ActionMode -->
+    <style name="CustomActionModeTitleText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.TaskFlow" parent="Base.Theme.TaskFlow" />
+
+    
+
+</resources>

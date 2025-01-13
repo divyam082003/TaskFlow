@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="highlight_color">#F5F5B3</color> <!-- Yellow Highlight -->
+
+    <color name="blue">#1b8391</color>
+    <color name="LBlue">#F4FAFB</color>
+    <color name="green">#157045</color>
+    <color name="LGreen">#54BC62</color>
+
+</resources>

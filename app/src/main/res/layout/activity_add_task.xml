@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.AddTaskActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/taskBgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:paddingBottom="67dp"
+        >
+
+        <View
+            android:id="@+id/blurOverlayView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#77000000"
+            android:visibility="gone"
+            />
+
+        <!-- Task input area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            >
+
+            <EditText
+                android:id="@+id/taskWriteET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your task here..."
+                android:gravity="top|start"
+                android:inputType="textMultiLine"
+                android:textSize="18sp"
+                android:background="@android:color/transparent"
+                android:scrollbars="vertical"
+                android:padding="16dp"
+                android:textColorHint="@color/blue"
+                android:textColor="@color/black"
+                />
+
+            <ImageView
+                android:id="@+id/taskImageIV"
+                android:visibility="gone"
+                android:layout_width="120dp"
+                android:layout_height="150dp"
+                android:layout_margin="16dp"
+                android:padding="4dp"
+                android:background="?attr/selectableItemBackground"
+                />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_bar_bg"
+        >
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <!-- share icon -->
+                <LinearLayout
+                    android:id="@+id/taskShareBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <ImageView
+                        android:id="@+id/shareIV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:textAlignment="center"
+                        android:src="@drawable/bottom_share_s"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:text="Share"
+                        android:textAlignment="center"
+                        android:textColor="@color/blue"
+                        />
+
+                </LinearLayout>
+
+                <!-- Change color icon -->
+                <LinearLayout
+                    android:id="@+id/taskColorBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <ImageView
+                        android:id="@+id/colorIV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:textAlignment="center"
+                        android:src="@drawable/bottom_color_s"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:text="Color"
+                        android:textAlignment="center"
+                        android:textColor="@color/blue"
+                        />
+
+                </LinearLayout>
+
+                <!-- Change background icon -->
+                <LinearLayout
+                    android:id="@+id/taskBgBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <ImageView
+                        android:id="@+id/bgIV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:textAlignment="center"
+                        android:src="@drawable/bottom_bg_s"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:text="Background"
+                        android:textAlignment="center"
+                        android:textColor="@color/blue"
+                        />
+
+                </LinearLayout>
+
+                <!-- Save task icon -->
+                <LinearLayout
+                    android:id="@+id/taskSaveBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <ImageView
+                        android:id="@+id/saveIV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/bottom_save_s"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/taskSaveBTTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save"
+                        android:textAlignment="center"
+                        android:textSize="11sp"
+                        android:textColor="@color/blue"
+                        />
+
+                </LinearLayout>
+
+                <!-- Add image icon -->
+                <LinearLayout
+                    android:id="@+id/taskAddImgBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:foreground="?attr/selectableItemBackground"
+                    >
+
+                    <ImageView
+                        android:id="@+id/addImageIV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:textAlignment="center"
+                        android:src="@drawable/bottom_image_s"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:text="Add Image"
+                        android:textAlignment="center"
+                        android:textColor="@color/blue"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+        <!-- Share task icon -->
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
+
